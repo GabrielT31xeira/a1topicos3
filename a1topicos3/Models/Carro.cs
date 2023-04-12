@@ -16,27 +16,3 @@ namespace a1topicos3.Models
         public string portas { get; set; }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}

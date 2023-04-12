@@ -1,0 +1,66 @@
+﻿@model a1topicos3.Models.Carro
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Carro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.placa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.placa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo_carro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo_carro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.portas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.portas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
