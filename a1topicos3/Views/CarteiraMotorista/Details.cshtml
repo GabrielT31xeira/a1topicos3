@@ -1,0 +1,34 @@
+﻿@model a1topicos3.Models.CarteiraMotorista
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CarteiraMotorista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.validade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.validade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numero_registro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numero_registro)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

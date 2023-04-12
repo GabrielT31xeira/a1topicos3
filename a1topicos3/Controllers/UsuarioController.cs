@@ -6,111 +6,112 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using a1topicos3.DAL;
 using a1topicos3.Models;
 
-namespace a1topicos3.DAL
+namespace a1topicos3.Controllers
 {
-    public class CarroController : Controller
+    public class UsuarioController : Controller
     {
         private CarroContext db = new CarroContext();
 
-        // GET: Carro
+        // GET: Usuario
         public ActionResult Index()
         {
-            return View(db.carros.ToList());
+            return View(db.usuarios.ToList());
         }
 
-        // GET: Carro/Details/5
+        // GET: Usuario/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Carro carro = db.carros.Find(id);
-            if (carro == null)
+            Usuario usuario = db.usuarios.Find(id);
+            if (usuario == null)
             {
                 return HttpNotFound();
             }
-            return View(carro);
+            return View(usuario);
         }
 
-        // GET: Carro/Create
+        // GET: Usuario/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Carro/Create
+        // POST: Usuario/Create
         // Para proteger-se contra ataques de excesso de postagem, ative as propriedades específicas às quais deseja se associar. 
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,placa,marca,modelo,cor,tipo_carro,portas")] Carro carro)
+        public ActionResult Create([Bind(Include = "ID,nome,email,numero_telefone,documento")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
-                db.carros.Add(carro);
+                db.usuarios.Add(usuario);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(carro);
+            return View(usuario);
         }
 
-        // GET: Carro/Edit/5
+        // GET: Usuario/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Carro carro = db.carros.Find(id);
-            if (carro == null)
+            Usuario usuario = db.usuarios.Find(id);
+            if (usuario == null)
             {
                 return HttpNotFound();
             }
-            return View(carro);
+            return View(usuario);
         }
 
-        // POST: Carro/Edit/5
+        // POST: Usuario/Edit/5
         // Para proteger-se contra ataques de excesso de postagem, ative as propriedades específicas às quais deseja se associar. 
         // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,placa,marca,modelo,cor,tipo_carro,portas")] Carro carro)
+        public ActionResult Edit([Bind(Include = "ID,nome,email,numero_telefone,documento")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(carro).State = EntityState.Modified;
+                db.Entry(usuario).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(carro);
+            return View(usuario);
         }
 
-        // GET: Carro/Delete/5
+        // GET: Usuario/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Carro carro = db.carros.Find(id);
-            if (carro == null)
+            Usuario usuario = db.usuarios.Find(id);
+            if (usuario == null)
             {
                 return HttpNotFound();
             }
-            return View(carro);
+            return View(usuario);
         }
 
-        // POST: Carro/Delete/5
+        // POST: Usuario/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Carro carro = db.carros.Find(id);
-            db.carros.Remove(carro);
+            Usuario usuario = db.usuarios.Find(id);
+            db.usuarios.Remove(usuario);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
