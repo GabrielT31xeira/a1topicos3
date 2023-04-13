@@ -1,10 +1,10 @@
-﻿@model IEnumerable<a1topicos3.Models.CarteiraMotorista>
+﻿@model IEnumerable<a1topicos3.Models.Telefone>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Principal</h2>
 
 <p>
     @Html.ActionLink("Criar Novo", "Create")
@@ -12,10 +12,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.validade)
+            @Html.DisplayNameFor(model => model.ddd)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.numero_registro)
+            @Html.DisplayNameFor(model => model.telefone)
         </th>
         <th></th>
     </tr>
@@ -23,15 +23,15 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.validade)
+            @Html.DisplayFor(modelItem => item.ddd)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.numero_registro)
+            @Html.DisplayFor(modelItem => item.telefone)
         </td>
         <td>
             @Html.ActionLink("Editar", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Detalhes", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Deletar", "Delete", new { id=item.ID })
         </td>
     </tr>
 }

@@ -1,0 +1,50 @@
+﻿@model a1topicos3.Models.Cartoes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhe</h2>
+
+<div>
+    <h4>Cartoes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo_cartao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo_cartao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cvc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cvc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.validade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.validade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Voltar a Lista", "Index")
+</p>

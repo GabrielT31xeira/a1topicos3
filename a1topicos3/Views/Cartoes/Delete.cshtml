@@ -1,4 +1,4 @@
-﻿@model a1topicos3.Models.Usuario
+﻿@model a1topicos3.Models.Cartoes
 
 @{
     ViewBag.Title = "Delete";
@@ -8,39 +8,39 @@
 
 <h3>Tem certeza que deseja apagar esse dado?</h3>
 <div>
-    <h4>Usuario</h4>
+    <h4>Cartoes</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.nome)
+            @Html.DisplayNameFor(model => model.tipo_cartao)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.nome)
+            @Html.DisplayFor(model => model.tipo_cartao)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.email)
+            @Html.DisplayNameFor(model => model.numero)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.email)
+            @Html.DisplayFor(model => model.numero)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.numero_telefone)
+            @Html.DisplayNameFor(model => model.cvc)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.numero_telefone)
+            @Html.DisplayFor(model => model.cvc)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.documento)
+            @Html.DisplayNameFor(model => model.validade)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.documento)
+            @Html.DisplayFor(model => model.validade)
         </dd>
 
     </dl>

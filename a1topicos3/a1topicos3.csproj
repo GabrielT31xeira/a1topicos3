@@ -129,7 +129,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CarroController.cs" />
     <Compile Include="Controllers\CarteiraMotoristaController.cs" />
+    <Compile Include="Controllers\CartoesController.cs" />
+    <Compile Include="Controllers\EnderecoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TelefonesController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="DAL\CarroContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -139,11 +142,20 @@
     <Compile Include="Migrations\202304122008204_InitialCreate.designer.cs">
       <DependentUpon>202304122008204_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304130047321_InitialCreate1.cs" />
+    <Compile Include="Migrations\202304130047321_InitialCreate1.designer.cs">
+      <DependentUpon>202304130047321_InitialCreate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304130122414_InitialCreate2.cs" />
+    <Compile Include="Migrations\202304130122414_InitialCreate2.designer.cs">
+      <DependentUpon>202304130122414_InitialCreate2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Carro.cs" />
     <Compile Include="Models\CarteiraMotorista.cs" />
     <Compile Include="Models\Cartoes.cs" />
     <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\Telefone.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -213,6 +225,21 @@
     <Content Include="Views\Usuario\Details.cshtml" />
     <Content Include="Views\Usuario\Edit.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Cartoes\Create.cshtml" />
+    <Content Include="Views\Cartoes\Delete.cshtml" />
+    <Content Include="Views\Cartoes\Details.cshtml" />
+    <Content Include="Views\Cartoes\Edit.cshtml" />
+    <Content Include="Views\Cartoes\Index.cshtml" />
+    <Content Include="Views\Endereco\Create.cshtml" />
+    <Content Include="Views\Endereco\Delete.cshtml" />
+    <Content Include="Views\Endereco\Details.cshtml" />
+    <Content Include="Views\Endereco\Edit.cshtml" />
+    <Content Include="Views\Endereco\Index.cshtml" />
+    <Content Include="Views\Telefones\Create.cshtml" />
+    <Content Include="Views\Telefones\Delete.cshtml" />
+    <Content Include="Views\Telefones\Details.cshtml" />
+    <Content Include="Views\Telefones\Edit.cshtml" />
+    <Content Include="Views\Telefones\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -247,6 +274,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202304122008204_InitialCreate.resx">
       <DependentUpon>202304122008204_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304130047321_InitialCreate1.resx">
+      <DependentUpon>202304130047321_InitialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304130122414_InitialCreate2.resx">
+      <DependentUpon>202304130122414_InitialCreate2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

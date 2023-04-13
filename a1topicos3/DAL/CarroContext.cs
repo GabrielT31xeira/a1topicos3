@@ -22,5 +22,7 @@ namespace a1topicos3.DAL
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
+
+        public System.Data.Entity.DbSet<a1topicos3.Models.Telefone> Telefones { get; set; }
     }
 }

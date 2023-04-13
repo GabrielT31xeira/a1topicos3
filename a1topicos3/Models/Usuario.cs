@@ -9,6 +9,7 @@ namespace a1topicos3.Models
     {
         public int ID { get; set; }
         public string nome { get; set; }
+        public string senha { get; set; }
         public string email { get; set; }
         public string numero_telefone { get; set; }
         public string documento { get; set; }
@@ -17,6 +18,7 @@ namespace a1topicos3.Models
         public virtual Endereco Endereco{ get; set; }
         public virtual ICollection<Cartoes> Cartoes { get; set; }
         public virtual ICollection<Carro> Carros { get; set; }
+        public virtual ICollection<Telefone> Telefones { get; set; }
 
     }
 }

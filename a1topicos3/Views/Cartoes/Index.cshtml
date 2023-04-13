@@ -1,4 +1,4 @@
-﻿@model IEnumerable<a1topicos3.Models.Usuario>
+﻿@model IEnumerable<a1topicos3.Models.Cartoes>
 
 @{
     ViewBag.Title = "Index";
@@ -12,16 +12,16 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nome)
+            @Html.DisplayNameFor(model => model.tipo_cartao)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.email)
+            @Html.DisplayNameFor(model => model.numero)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.numero_telefone)
+            @Html.DisplayNameFor(model => model.cvc)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.documento)
+            @Html.DisplayNameFor(model => model.validade)
         </th>
         <th></th>
     </tr>
@@ -29,16 +29,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.nome)
+            @Html.DisplayFor(modelItem => item.tipo_cartao)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.email)
+            @Html.DisplayFor(modelItem => item.numero)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.numero_telefone)
+            @Html.DisplayFor(modelItem => item.cvc)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.documento)
+            @Html.DisplayFor(modelItem => item.validade)
         </td>
         <td>
             @Html.ActionLink("Editar", "Edit", new { id=item.ID }) |
